@@ -1,0 +1,83 @@
+﻿@model DataAccess.DataAccess.AccountViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Account.Username" class="control-label"></label>
+                <input asp-for="Account.Username" id="accUsername" class="form-control" readonly />
+                <span asp-validation-for="Account.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="AccountInformation.Username" class="control-label"></label>
+                <input asp-for="AccountInformation.Username" id="accInfoUsername" class="form-control" readonly />
+                <span asp-validation-for="AccountInformation.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="Account.Password" class="control-label"></label>
+                <input asp-for="Account.Password" id="accUsername" class="form-control" readonly />
+                <span asp-validation-for="Account.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Account.SercurityAnswer" class="control-label"></label>
+                <input asp-for="Account.SercurityAnswer" class="form-control" />
+                <span asp-validation-for="Account.SercurityAnswer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountInformation.AccountTypeId" class="control-label"></label>
+                <input asp-for="AccountInformation.AccountTypeId" class="form-control" readonly />
+                <span asp-validation-for="AccountInformation.AccountTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountInformation.FullName" class="control-label"></label>
+                <input asp-for="AccountInformation.FullName" class="form-control" />
+                <span asp-validation-for="AccountInformation.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountInformation.PhoneNumber" class="control-label"></label>
+                <input asp-for="AccountInformation.PhoneNumber" class="form-control" />
+                <span asp-validation-for="AccountInformation.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountInformation.Gender" class="control-label"></label>
+                <select asp-for="AccountInformation.Gender" class="form-control" id="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <span asp-validation-for="AccountInformation.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountInformation.Email" class="control-label"></label>
+                <input asp-for="AccountInformation.Email" class="form-control" />
+                <span asp-validation-for="AccountInformation.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" onclick="setUsername()" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+    function setUsername() {
+        document.getElementById("accInfoUsername").value = document.getElementById("accUsername").value;
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

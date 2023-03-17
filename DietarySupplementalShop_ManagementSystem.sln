@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Presentation Layer", "2.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietarySupplementalShop", "DietarySupplementalShop\DietarySupplementalShop.csproj", "{8BE2C9C7-6234-4578-8CDC-240F70DADAF9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DietarySupplementalShopWeb", "DietarySupplementalShopWeb\DietarySupplementalShopWeb.csproj", "{77AC46BA-A610-4A91-9758-4A53A1CD6E84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{8BE2C9C7-6234-4578-8CDC-240F70DADAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE2C9C7-6234-4578-8CDC-240F70DADAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE2C9C7-6234-4578-8CDC-240F70DADAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AC46BA-A610-4A91-9758-4A53A1CD6E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AC46BA-A610-4A91-9758-4A53A1CD6E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AC46BA-A610-4A91-9758-4A53A1CD6E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AC46BA-A610-4A91-9758-4A53A1CD6E84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{576792CB-DCB4-4E47-890E-5832CA9F9DC4} = {5869C971-EA85-4A09-8F4F-952F64C8D979}
 		{8BE2C9C7-6234-4578-8CDC-240F70DADAF9} = {867CFC5A-25F3-4B82-9E69-25F77C405124}
+		{77AC46BA-A610-4A91-9758-4A53A1CD6E84} = {867CFC5A-25F3-4B82-9E69-25F77C405124}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD045E0D-DF17-487A-BF0F-7AE86D2C41E9}

@@ -1,5 +1,6 @@
 ﻿using DataAccess.DataAccess;
 using DataAccess.Repository;
+using DataAccess.Security;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace DietarySupplementalShop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            btnLogin.Enabled = false;
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             IAccountRepository IAccount = new AccountRepository();
@@ -35,7 +37,8 @@ namespace DietarySupplementalShop
             {
                 if (accountInfo.AccountTypeId == "AD")
                 {
-                    if (account.Password != MD5Encryption(password))
+                    MD5Encrypt md5 = new MD5Encrypt();
+                    if (account.Password != md5.MD5Encryption(password))
                     {
                         MessageBox.Show("Login failed, please try again!");
                     }
@@ -56,19 +59,7 @@ namespace DietarySupplementalShop
             {
                 MessageBox.Show("Login failed, please try again!");
             }
-        }
-
-        public string MD5Encryption(string encryptionText)
-        {
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            byte[] array = Encoding.UTF8.GetBytes(encryptionText);
-            array = md5.ComputeHash(array);
-            StringBuilder sb = new StringBuilder();
-            foreach (byte ba in array)
-            {
-                sb.Append(ba.ToString("x2").ToLower());
-            }
-            return sb.ToString();
+            btnLogin.Enabled = true;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

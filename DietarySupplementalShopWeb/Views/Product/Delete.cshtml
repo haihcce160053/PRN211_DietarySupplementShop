@@ -1,0 +1,32 @@
+﻿@model DataAccess.DataAccess.ProductViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product.ProductId" class="control-label"></label>
+                <input asp-for="Product.ProductId" class="form-control" readonly value="@ViewBag.ProductId" />
+                <span asp-validation-for="Product.ProductId" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="ProductInformation.ProductId" class="control-label"></label>
+                <input asp-for="ProductInformation.ProductId" class="form-control" readonly value="@ViewBag.ProductId" />
+                <span asp-validation-for="ProductInformation.ProductId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Delete" class="btn btn-primary" />
+            </div>
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
+</div>

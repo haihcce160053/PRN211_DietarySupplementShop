@@ -292,7 +292,7 @@
             Controls.Add(txtFullname);
             Name = "frmAccountCRUD";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "frmCRUD";
+            Text = "frmAccountCRUD";
             Load += frmCRUD_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

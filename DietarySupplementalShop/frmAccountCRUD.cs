@@ -26,13 +26,15 @@ namespace DietarySupplementalShop
 
         private void frmCRUD_Load(object sender, EventArgs e)
         {
-            if(CRUDStatus == 1)
+            //Create
+            if (CRUDStatus == 1)
             {
                 btnProcess.Text = "Create new account";
                 rdoMale.Checked = true;
                 rdoPermissionCUS.Checked = true;
                 this.Text = "Create new account";
             }
+
             //Update
             if (CRUDStatus == 2)
             {
@@ -41,6 +43,7 @@ namespace DietarySupplementalShop
                 btnProcess.Text = "Update information";
                 this.Text = "Update account information";
             }
+
             //Delete
             if (CRUDStatus == 3)
             {
@@ -49,6 +52,7 @@ namespace DietarySupplementalShop
                 btnProcess.Text = "Delete account";
                 this.Text = "Delete account";
             }
+
             //View
             if (CRUDStatus == 4)
             {

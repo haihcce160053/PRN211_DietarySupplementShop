@@ -32,5 +32,17 @@ namespace DietarySupplementalShop
             AccountManagement accountManagement = new AccountManagement();
             accountManagement.Show();
         }
+
+        private void btnProductMng_Click(object sender, EventArgs e)
+        {
+            ProductManagement productManagement = new ProductManagement();
+            productManagement.Show();
+        }
+
+        private void btnOrderMng_Click(object sender, EventArgs e)
+        {
+            OrderManagement orderManagement = new OrderManagement();
+            orderManagement.Show();
+        }
     }
 }

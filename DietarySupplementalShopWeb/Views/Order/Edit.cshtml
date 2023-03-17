@@ -1,0 +1,68 @@
+﻿@model DataAccess.DataAccess.OrderViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>OrderList</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrderList.OrderId" class="control-label"></label>
+                <input asp-for="OrderList.OrderId" class="form-control" readonly/>
+                <span asp-validation-for="OrderList.OrderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderList.OrderStatusId" class="control-label"></label>
+                <select asp-for="OrderList.OrderStatusId" class="form-control" id="OrderStatusId">
+                    <option value="DCK">DCK</option>
+                    <option value="DHD">DHD</option>
+                    <option value="DLH">DLH</option>
+                    <option value="DNH">DNH</option>
+                    <option value="DVC">DVC</option>
+                    <option value="DXN">DXN</option>
+                    <option value="KLHD">KLHD</option>
+                    <option value="KNH">KNH</option>
+                </select>
+                <span asp-validation-for="OrderList.OrderStatusId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderList.Username" class="control-label"></label>
+                <input asp-for="OrderList.Username" class="form-control" readonly />
+                <span asp-validation-for="OrderList.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderList.DeliveryAddress" class="control-label"></label>
+                <input asp-for="OrderList.DeliveryAddress" class="form-control" />
+                <span asp-validation-for="OrderList.DeliveryAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderList.OrderTime" class="control-label"></label>
+                <input asp-for="OrderList.OrderTime" class="form-control" readonly />
+                <span asp-validation-for="OrderList.OrderTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderList.TotalBill" class="control-label"></label>
+                <input asp-for="OrderList.TotalBill" class="form-control" readonly />
+                <span asp-validation-for="OrderList.TotalBill" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -122,6 +122,7 @@ namespace DataAccess.DataAccess
             {
                 entity.HasNoKey();
 
+                //entity.HasKey(e => e.OrderId);
                 entity.Property(e => e.OrderId)
                     .IsRequired()
                     .HasMaxLength(10)
@@ -202,6 +203,8 @@ namespace DataAccess.DataAccess
 
             modelBuilder.Entity<Product>(entity =>
             {
+                entity.HasKey(e => e.ProductId);
+
                 entity.ToTable("Product");
 
                 entity.Property(e => e.ProductId)
@@ -220,7 +223,8 @@ namespace DataAccess.DataAccess
 
             modelBuilder.Entity<ProductInformation>(entity =>
             {
-                entity.HasNoKey();
+                //entity.HasNoKey();
+                entity.HasKey(e => e.ProductId);
 
                 entity.ToTable("ProductInformation");
 

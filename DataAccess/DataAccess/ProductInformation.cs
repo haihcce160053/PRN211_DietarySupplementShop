@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-#nullable disable
 
 namespace DataAccess.DataAccess
 {
     public partial class ProductInformation
     {
-        public string ProductId { get; set; }
+        public string ProductId { get; set; } 
         public string ProductTypeId { get; set; }
         public int Quantity { get; set; }
         public int Price { get; set; }

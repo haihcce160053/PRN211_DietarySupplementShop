@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DataAccess.DataAccess.Account>
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <form method="POST" id="login-form">
+        <div class="container">
+            <div class="row justify-content-center" style="margin-top: 120px;">
+                <div class="col-md-7 col-lg-5">
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-user-o"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <h3 class="text-left mb-1" style="color: #024FA0;">Login</h3>
+                            <span class="text-left" style="text-align:left; font-size: 13px; color: dimgray">Welcome to the management system, please login</span>
+                            <hr>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control rounded-left" placeholder="Username" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control rounded-left" placeholder="Password" autofocus>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 15px;">
+                            <button type="submit" id="btnLogin" name="btnLogin" class="form-control btn btn-primary rounded submit px-3" style="background-color: #024FA0;">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

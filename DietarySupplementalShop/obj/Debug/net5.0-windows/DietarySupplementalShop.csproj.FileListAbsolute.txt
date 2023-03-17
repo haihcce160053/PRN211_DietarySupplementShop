@@ -63,3 +63,7 @@ D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\ne
 D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\net5.0-windows\DietarySupplementalShop.frmMain.resources
 D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\net5.0-windows\DietarySupplementalShop.AccountManagement.resources
 D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\net5.0-windows\DietarySupplementalShop.frmAccountCRUD.resources
+D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\net5.0-windows\DietarySupplementalShop.ProductManagement.resources
+D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\net5.0-windows\DietarySupplementalShop.frmProductCRUD.resources
+D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\net5.0-windows\DietarySupplementalShop.OrderManagement.resources
+D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShop\obj\Debug\net5.0-windows\DietarySupplementalShop.frmOrderCRUD.resources

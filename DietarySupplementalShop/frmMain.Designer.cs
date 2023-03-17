@@ -52,6 +52,7 @@
             btnProductMng.TabIndex = 1;
             btnProductMng.Text = "Product management";
             btnProductMng.UseVisualStyleBackColor = true;
+            btnProductMng.Click += btnProductMng_Click;
             // 
             // btnOrderMng
             // 
@@ -61,6 +62,7 @@
             btnOrderMng.TabIndex = 2;
             btnOrderMng.Text = "Order management";
             btnOrderMng.UseVisualStyleBackColor = true;
+            btnOrderMng.Click += btnOrderMng_Click;
             // 
             // lblHello
             // 
