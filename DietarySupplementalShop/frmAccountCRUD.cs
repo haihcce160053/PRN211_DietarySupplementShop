@@ -105,7 +105,6 @@ namespace DietarySupplementalShop
         {
             Account account = new Account();
             AccountInformation accountInfo = new AccountInformation();
-
             accountInfo.FullName = txtFullname.Text;
             account.Username = txtUsername.Text;
             accountInfo.Username = txtUsername.Text;
@@ -204,20 +203,55 @@ namespace DietarySupplementalShop
             }
         }
 
+        private bool Validate()
+        {
+            if(txtFullname.Text.Length != 0
+                && txtUsername.Text.Length != 0
+                && txtEmail.Text.Length != 0 
+                && txtPassword.Text.Length != 0
+                && txtRePassword.Text.Length != 0
+                && txtAnswer.Text.Length != 0
+                && txtPhone.Text.Length != 0)
+            {
+                if (txtEmail.Text.Contains("@"))
+                {
+                    if(txtPhone.Text.Length <= 10)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         private void btnProcess_Click(object sender, EventArgs e)
         {
             //Add new account
             if (CRUDStatus == 1)
             {
-                CreateAccount();
-                this.Close();
+                if (Validate() == true)
+                {
+                    CreateAccount();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill full information!");
+                } 
             }
 
             //Update information
             if (CRUDStatus == 2)
             {
-                UpdateAccount();
-                this.Close();
+                if (Validate() == true)
+                {
+                    UpdateAccount();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill full information!");
+                }              
             }
 
             //Delete information

@@ -155,21 +155,61 @@ namespace DietarySupplementalShop
                 MessageBox.Show("Delete product for " + id + " failed");
             }
         }
+        private bool Validate()
+        {
+            if (txtProductID.Text.Length != 0
+                && txtProductName.Text.Length != 0
+                && txtPictureLink.Text.Length != 0
+                && txtDescription.Text.Length != 0
+                && txtQuantity.Text.Length != 0
+                && txtPrice.Text.Length != 0
+                && txtOrigin.Text.Length != 0
+                && txtSoldAmmount.Text.Length != 0)
+            {
+
+                try
+                {
+                    int num =  Convert.ToInt32(txtQuantity.Text);
+                    int num2 = Convert.ToInt32(txtPrice.Text);
+                    int num3 = Convert.ToInt32(txtSoldAmmount.Text);
+                    return true;
+                }
+                catch 
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
 
         private void btnProcess_Click(object sender, EventArgs e)
         {
             //Add new product
             if (CRUDStatus == 1)
             {
-                CreateProduct();
-                this.Close();
+                if(Validate() == true)
+                {
+                    CreateProduct();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill full information!");
+                }               
             }
 
             //Update product
             if (CRUDStatus == 2)
             {
-                UpdateProductInformation();
-                this.Close();
+                if (Validate() == true)
+                {
+                    UpdateProductInformation();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill full information!");
+                }   
             }
 
             //Delete product

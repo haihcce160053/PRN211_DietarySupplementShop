@@ -94,13 +94,29 @@ namespace DietarySupplementalShop
             }
         }
 
+        private bool Validate()
+        {
+            if (txtAddress.Text.Length != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         private void btnProcess_Click(object sender, EventArgs e)
         {
             //Update
             if(CRUDStatus == 2)
             {
-                UpdateOrderInformation();
-                this.Close();
+                if (Validate() == true)
+                {
+                    UpdateOrderInformation();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill full information!");
+                }
             }
         }
     }

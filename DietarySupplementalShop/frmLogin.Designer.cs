@@ -44,7 +44,6 @@ namespace DietarySupplementalShop
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new System.Drawing.Size(224, 23);
             txtUsername.TabIndex = 0;
-            txtUsername.Text = "Admin";
             // 
             // txtPassword
             // 
@@ -53,7 +52,6 @@ namespace DietarySupplementalShop
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new System.Drawing.Size(224, 23);
             txtPassword.TabIndex = 1;
-            txtPassword.Text = "Admin123";
             txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
