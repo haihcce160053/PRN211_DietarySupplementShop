@@ -1,5 +1,6 @@
 ﻿using DataAccess.DataAccess;
 using DataAccess.Repository;
+using DataAccess.Security;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -119,7 +120,8 @@ namespace DietarySupplementalShop
             }
             if (txtPassword.Text == txtRePassword.Text)
             {
-                account.Password = txtPassword.Text;
+                MD5Encrypt md5 = new MD5Encrypt();
+                account.Password = md5.MD5Encryption(txtPassword.Text);
             }
             account.SercurityAnswer = txtAnswer.Text;
             accountInfo.PhoneNumber = Convert.ToInt32(txtPhone.Text);

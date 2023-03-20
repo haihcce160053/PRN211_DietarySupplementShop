@@ -40,8 +40,22 @@ namespace DietarySupplementalShopWeb.Controllers
                 MD5Encrypt md5 = new MD5Encrypt();
                 if (login.Password.Equals(md5.MD5Encryption(password)))
                 {
-                    ViewBag.isLogin = true;
-                    return RedirectToAction("Index", "Main");
+                    bool isAdmin = false;
+                    if(accountInformationRepository.GetAccountInformationByUsername(username).AccountTypeId == "AD")
+                    {
+                        isAdmin = true;
+                    }
+
+                    if(isAdmin == true)
+                    {
+                        ViewBag.isLogin = true;
+                        return RedirectToAction("Index", "Main");
+                    }
+                    else
+                    {
+                        ViewBag.isLogin = false;
+                        return RedirectToAction(nameof(Login));
+                    }
                 }
                 else
                 {
