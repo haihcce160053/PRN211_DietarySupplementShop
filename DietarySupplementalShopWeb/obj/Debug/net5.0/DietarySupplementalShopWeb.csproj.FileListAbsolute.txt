@@ -163,3 +163,4 @@ D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShopWeb\obj\Debug
 D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShopWeb\obj\Debug\net5.0\Razor\Views\Order\Details.cshtml.g.cs
 D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShopWeb\obj\Debug\net5.0\Razor\Views\Order\Edit.cshtml.g.cs
 D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShopWeb\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+D:\DietarySupplementalShop_ManagementSystem\DietarySupplementalShopWeb\obj\Debug\net5.0\Razor\Views\Main\Index.cshtml.g.cs

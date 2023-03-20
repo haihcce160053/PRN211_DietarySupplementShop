@@ -41,7 +41,7 @@ namespace DietarySupplementalShopWeb.Controllers
                 if (login.Password.Equals(md5.MD5Encryption(password)))
                 {
                     ViewBag.isLogin = true;
-                    return RedirectToAction("Index", "Account");
+                    return RedirectToAction("Index", "Main");
                 }
                 else
                 {
